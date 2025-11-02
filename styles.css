@@ -299,7 +299,7 @@ button:focus-visible, a:focus-visible { outline: none; box-shadow: var(--ring); 
 }
 .btn-primary { background: #10b981; color: #0b0b0b; box-shadow: 0 8px 20px rgba(16,185,129,.25); }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(16,185,129,.3); }
-.btn-secondary { background: transparent; color: #e2e8f0; border: 1px solid rgba(226,232,240,0.45); }
+.btn-secondary { background: transparent; color: black; border: 1px solid rgba(226,232,240,0.45); }
 .btn-secondary:hover { background: rgba(226,232,240,0.08); }
 
 @keyframes gradientShift {
@@ -1119,13 +1119,20 @@ button:focus-visible, a:focus-visible { outline: none; box-shadow: var(--ring); 
   border-radius: 24px;
   padding: 40px 32px;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1), 0 4px 12px rgba(16, 185, 129, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.8s ease;
   display: flex;
   flex-direction: column;
   height: 100%;
+  opacity: 0;
+  transform: translateY(40px);
 }
 
-.tier-card:hover {
+.tier-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tier-card.visible:hover {
   transform: translateY(-8px);
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.15), 0 8px 20px rgba(16, 185, 129, 0.12);
 }
@@ -2335,11 +2342,18 @@ button:focus-visible, a:focus-visible { outline: none; box-shadow: var(--ring); 
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1), 0 4px 12px rgba(16, 185, 129, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.8s ease;
   cursor: pointer;
+  opacity: 0;
+  transform: translateY(40px);
 }
 
-.gallery-preview-card:hover {
+.gallery-preview-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-preview-card.visible:hover {
   transform: translateY(-8px);
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.15), 0 8px 20px rgba(16, 185, 129, 0.12);
 }
@@ -2456,11 +2470,10 @@ button:focus-visible, a:focus-visible { outline: none; box-shadow: var(--ring); 
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1), 0 4px 12px rgba(16, 185, 129, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.8s ease;
   cursor: pointer;
   opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s ease forwards;
+  transform: translateY(40px);
 }
 
 .gallery-card.visible {
@@ -2468,7 +2481,7 @@ button:focus-visible, a:focus-visible { outline: none; box-shadow: var(--ring); 
   transform: translateY(0);
 }
 
-.gallery-card:hover {
+.gallery-card.visible:hover {
   transform: translateY(-8px);
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.15), 0 8px 20px rgba(16, 185, 129, 0.12);
 }

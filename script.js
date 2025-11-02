@@ -62,6 +62,33 @@
     `;
     galleryPreviewGrid.appendChild(card);
   });
+
+  // Intersection Observer for scroll animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const cards = Array.from(galleryPreviewSection.querySelectorAll('.gallery-preview-card'));
+        const index = cards.indexOf(entry.target);
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, index * 100);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe all gallery preview cards
+  setTimeout(() => {
+    const previewCards = galleryPreviewSection.querySelectorAll('.gallery-preview-card');
+    previewCards.forEach(card => {
+      observer.observe(card);
+    });
+  }, 100);
 })();
 
 // About Section Animations
@@ -182,6 +209,39 @@
   const socialCards = contactSection.querySelectorAll('.social-link-card');
   socialCards.forEach((card, index) => {
     card.style.transitionDelay = `${0.8 + index * 0.1}s`;
+    observer.observe(card);
+  });
+})();
+
+// Membership Benefits Section Animations
+(function() {
+  'use strict';
+
+  const membershipSection = document.querySelector('.membership-section');
+  if (!membershipSection) return;
+
+  // Intersection Observer for scroll animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const cards = Array.from(membershipSection.querySelectorAll('.tier-card'));
+        const index = cards.indexOf(entry.target);
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, index * 100);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe tier cards with staggered delays
+  const tierCards = membershipSection.querySelectorAll('.tier-card');
+  tierCards.forEach((card, index) => {
     observer.observe(card);
   });
 })();
@@ -563,7 +623,11 @@
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+        const cards = Array.from(document.querySelectorAll('.gallery-card'));
+        const index = cards.indexOf(entry.target);
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, index * 100);
         observer.unobserve(entry.target);
       }
     });
@@ -1923,6 +1987,33 @@
     `;
     galleryPreviewGrid.appendChild(card);
   });
+
+  // Intersection Observer for scroll animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const cards = Array.from(galleryPreviewSection.querySelectorAll('.gallery-preview-card'));
+        const index = cards.indexOf(entry.target);
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, index * 100);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe all gallery preview cards
+  setTimeout(() => {
+    const previewCards = galleryPreviewSection.querySelectorAll('.gallery-preview-card');
+    previewCards.forEach(card => {
+      observer.observe(card);
+    });
+  }, 100);
 })();
 
 // About Section Animations
@@ -2043,6 +2134,39 @@
   const socialCards = contactSection.querySelectorAll('.social-link-card');
   socialCards.forEach((card, index) => {
     card.style.transitionDelay = `${0.8 + index * 0.1}s`;
+    observer.observe(card);
+  });
+})();
+
+// Membership Benefits Section Animations
+(function() {
+  'use strict';
+
+  const membershipSection = document.querySelector('.membership-section');
+  if (!membershipSection) return;
+
+  // Intersection Observer for scroll animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const cards = Array.from(membershipSection.querySelectorAll('.tier-card'));
+        const index = cards.indexOf(entry.target);
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, index * 100);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe tier cards with staggered delays
+  const tierCards = membershipSection.querySelectorAll('.tier-card');
+  tierCards.forEach((card, index) => {
     observer.observe(card);
   });
 })();
