@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Innovators Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="masthead">
+      <!-- Background video limited to header + hero -->
+      <video class="hero-video" src="assets/hero section video/motion2Fast_Cinematic_establishing_shot_sweeping_drone_footage_0.mp4" autoplay muted loop playsinline></video>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <!-- Header Section -->
+      <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="#">Innovators Club</a>
+
+        <nav class="primary-nav" aria-label="Main">
+
+          <ul class="nav-list" id="mobile-menu">
+            <li class="nav-item"><a href="#">Programs</a></li>
+            <li class="nav-item"><a href="#">Events</a></li>
+            <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a href="#">Blog</a></li>
+            <li class="nav-item"><a href="#about">About</a></li>
+            <li class="nav-item"><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <a class="cta" href="#">Join now</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+      </header>
+      <div class="nav-overlay" hidden></div>
+
+      <!-- Hero Section -->
+      <section class="hero" aria-label="Hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Innovate. Build. Lead.</h1>
+        <p class="hero-sub">Empowering students to invent, build, and lead</p>
+        <div class="hero-ctas">
+          <a href="#learn" class="btn btn-primary">Explore Programs</a>
+          <a href="#learn" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+      </section>
+    </div>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+      <h2 class="section-title">Innovation Projects</h2>
+      <p class="section-subtitle">Explore the groundbreaking projects created by our talented student innovators</p>
+      
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <!-- Project cards will be inserted here by JavaScript -->
+        </div>
+      </div>
+      
+      <div class="carousel-indicators">
+        <!-- Indicators will be inserted here by JavaScript -->
+      </div>
+      
+      <div class="carousel-nav">
+        <button class="nav-btn prev-btn" aria-label="Previous project">❮</button>
+        <button class="nav-btn next-btn" aria-label="Next project">❯</button>
+      </div>
+      
+      <div class="projects-cta">
+        <a href="projects.html" class="btn btn-primary">View All Projects</a>
+      </div>
+    </section>
+
+    <!-- Gallery Preview Section -->
+    <section class="gallery-preview-section" id="gallery-preview">
+      <h2 class="section-title">Project Gallery</h2>
+      <p class="section-subtitle">Discover innovative projects from our talented community of students and innovators</p>
+      
+      <div class="gallery-preview-grid" id="gallery-preview-grid">
+        <!-- Featured project cards will be inserted here by JavaScript -->
+      </div>
+      
+      <div class="gallery-preview-cta">
+        <a href="gallery.html" class="btn btn-primary">View Full Gallery</a>
+      </div>
+    </section>
+
+    <!-- Events & Timeline Section -->
+    <section class="events-section" id="events">
+      <h2 class="section-title">Events & Timeline</h2>
+      <p class="section-subtitle">Join us for exciting events and workshops designed to inspire innovation and collaboration</p>
+      
+      <!-- Upcoming Events -->
+      <div class="timeline-container">
+        <div class="timeline-line" aria-hidden="true"></div>
+        <div class="timeline-events" id="upcoming-events">
+          <!-- Event items will be inserted here by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Past Events Collapsible Section -->
+      <div class="past-events-container">
+        <button class="past-events-toggle" id="past-events-toggle" aria-expanded="false" aria-controls="past-events-list">
+          <span class="toggle-text">View Past Events</span>
+          <span class="toggle-icon" aria-hidden="true">▼</span>
+        </button>
+        <div class="past-events-content" id="past-events-list" aria-hidden="true">
+          <div class="timeline-container">
+            <div class="timeline-line past" aria-hidden="true"></div>
+            <div class="timeline-events past" id="past-events">
+              <!-- Past event items will be inserted here by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Membership Benefits Section -->
+    <section class="membership-section" id="membership">
+      <h2 class="section-title">Membership Benefits</h2>
+      <p class="section-subtitle">Choose the membership tier that best fits your journey as an innovator</p>
+      
+      <div class="membership-grid">
+        <!-- Free Tier -->
+        <div class="tier-card">
+          <div class="tier-header">
+            <h3 class="tier-name">Free</h3>
+            <span class="tier-badge">Basic Access</span>
+          </div>
+          <div class="tier-price">Free</div>
+          <ul class="benefits-list">
+            <li class="benefit-item">
+              <span class="benefit-icon">📚</span>
+              <span class="benefit-text">Access to blog articles and resources</span>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-icon">📅</span>
+              <span class="benefit-text">View public events calendar</span>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-icon">💬</span>
+              <span class="benefit-text">Join community discussions</span>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-icon">👀</span>
+              <span class="benefit-text">View innovation projects showcase</span>
+            </li>
+          </ul>
+          <a href="#" class="tier-cta btn btn-secondary">Get Started</a>
+        </div>
+
+        <!-- Member Tier -->
+        <div class="tier-card featured">
+          <div class="tier-header">
+            <h3 class="tier-name">Member</h3>
+            <span class="tier-badge">Full Benefits</span>
+          </div>
+          <div class="tier-price">Member</div>
+          <ul class="benefits-list">
+            <li class="benefit-item">
+              <span class="benefit-icon">✅</span>
+              <span class="benefit-text">Everything in Free tier</span>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-icon">🎓</span>
+              <span class="benefit-text">Access to workshops and training</span>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-icon">🤝</span>
+              <span class="benefit-text">Mentorship opportunities</span>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-icon">🔧</span>
+              <span class="benefit-text">Project resources and tools access</span>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-icon">🎫</span>
+              <span class="benefit-text">Priority event registration</span>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-icon">💼</span>
+              <span class="benefit-text">Career development support</span>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-icon">🏆</span>
+              <span class="benefit-text">Competition participation eligibility</span>
+            </li>
+          </ul>
+          <a href="#" class="tier-cta btn btn-primary">Join Now</a>
+        </div>
+
+        <!-- Leadership Tier -->
+        <div class="tier-card">
+          <div class="tier-header">
+            <h3 class="tier-name">Leadership</h3>
+            <span class="tier-badge">Additional Perks</span>
+          </div>
+          <div class="tier-price">Leadership</div>
+          <ul class="benefits-list">
+            <li class="benefit-item">
+              <span class="benefit-icon">✅</span>
+              <span class="benefit-text">Everything in Member tier</span>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-icon">👑</span>
+              <span class="benefit-text">Lead team projects and initiatives</span>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-icon">🎤</span>
+              <span class="benefit-text">Speak at events and workshops</span>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-icon">🔐</span>
+              <span class="benefit-text">Exclusive leadership resources</span>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-icon">🤝</span>
+              <span class="benefit-text">Mentor other members</span>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-icon">🌟</span>
+              <span class="benefit-text">Recognition and awards</span>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-icon">🚀</span>
+              <span class="benefit-text">Early access to new programs</span>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-icon">🌐</span>
+              <span class="benefit-text">Network with industry leaders</span>
+            </li>
+          </ul>
+          <a href="#" class="tier-cta btn btn-primary">Apply for Leadership</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="about-container">
+        <!-- Hero Introduction -->
+        <div class="about-hero">
+          <h2 class="section-title">About Innovators Club</h2>
+          <p class="section-subtitle">We are a community of forward-thinking students passionate about creativity, technology, and problem-solving in a technological world.</p>
+        </div>
+
+        <!-- Mission & Vision Grid -->
+        <div class="mission-vision-grid">
+          <div class="mission-vision-card mission-card">
+            <div class="card-icon">🎯</div>
+            <h3 class="card-title">Our Mission</h3>
+            <p class="card-description">To empower students to transform innovative ideas into reality by providing a collaborative platform for learning, experimentation, and growth in technology and innovation.</p>
+          </div>
+
+          <div class="mission-vision-card vision-card">
+            <div class="card-icon">🌟</div>
+            <h3 class="card-title">Our Vision</h3>
+            <p class="card-description">To become the leading student innovation hub where creativity meets technology, fostering the next generation of innovators, entrepreneurs, and technology leaders.</p>
+          </div>
+        </div>
+
+        <!-- Core Values -->
+        <div class="values-showcase">
+          <h3 class="values-title">Our Core Values</h3>
+          <div class="values-grid">
+            <div class="value-card">
+              <div class="value-icon">💡</div>
+              <h4 class="value-name">Innovation</h4>
+              <p class="value-description">We encourage bold ideas and creative solutions to real-world challenges.</p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">🤝</div>
+              <h4 class="value-name">Collaboration</h4>
+              <p class="value-description">We believe in the power of teamwork and diverse perspectives coming together.</p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">📚</div>
+              <h4 class="value-name">Learning</h4>
+              <p class="value-description">We foster a culture of continuous learning and knowledge sharing.</p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">🚀</div>
+              <h4 class="value-name">Impact</h4>
+              <p class="value-description">We strive to create solutions that make a meaningful difference in our community.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Statistics -->
+        <div class="stats-container">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number" data-target="500">0</div>
+              <div class="stat-label">Active Members</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" data-target="150">0</div>
+              <div class="stat-label">Innovation Projects</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" data-target="50">0</div>
+              <div class="stat-label">Events & Workshops</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" data-target="25">0</div>
+              <div class="stat-label">Awards Won</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Our Story -->
+        <div class="about-story">
+          <div class="story-content">
+            <h3 class="story-title">Our Story</h3>
+            <div class="story-text">
+              <p>Founded with a vision to bridge the gap between academic learning and real-world innovation, Innovators Club has been at the forefront of student-led technological advancement for over a decade. We started as a small group of passionate students who believed that innovation shouldn't wait until graduation.</p>
+              <p>Today, we've grown into a vibrant community of over 500 members, working on groundbreaking projects that span artificial intelligence, sustainable technology, virtual reality, and social impact solutions. Our members have launched startups, won national competitions, and created technologies that are making a difference.</p>
+              <p>What sets us apart is our commitment to hands-on learning, mentorship, and creating a supportive environment where every member can thrive. Whether you're a beginner exploring technology for the first time or an experienced developer looking to make an impact, there's a place for you here.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Showcase Section -->
+    <section class="team-section" id="team">
+      <h2 class="section-title">Team Showcase</h2>
+      <p class="section-subtitle">Meet the passionate leaders driving innovation and empowering students to build the future</p>
+      
+      <div class="team-grid">
+        <!-- Team member cards will be inserted here by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+      <h2 class="section-title">What People Say</h2>
+      <p class="section-subtitle">Hear from our students and teachers about their experiences with the Innovators Club</p>
+      
+      <div class="testimonials-carousel-container">
+        <div class="testimonials-carousel-track">
+          <!-- Testimonial cards will be inserted here by JavaScript -->
+        </div>
+      </div>
+      
+      <div class="testimonials-indicators">
+        <!-- Indicators will be inserted here by JavaScript -->
+      </div>
+      
+      <div class="testimonials-nav">
+        <button class="testimonial-nav-btn prev-testimonial-btn" aria-label="Previous testimonial">❮</button>
+        <button class="testimonial-nav-btn next-testimonial-btn" aria-label="Next testimonial">❯</button>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Find answers to common questions about membership, participation, and more</p>
+      
+      <div class="faq-search-container">
+        <input 
+          type="text" 
+          id="faq-search" 
+          class="faq-search-input" 
+          placeholder="Search questions..."
+          aria-label="Search frequently asked questions"
+        >
+        <button class="faq-search-clear" id="faq-search-clear" aria-label="Clear search" hidden>✕</button>
+      </div>
+      
+      <div class="faq-filters" role="tablist" aria-label="Filter questions by category">
+        <button class="faq-filter-btn active" data-category="all" role="tab" aria-selected="true">All</button>
+        <button class="faq-filter-btn" data-category="membership" role="tab" aria-selected="false">Membership</button>
+        <button class="faq-filter-btn" data-category="time" role="tab" aria-selected="false">Time Commitment</button>
+        <button class="faq-filter-btn" data-category="skills" role="tab" aria-selected="false">Skills</button>
+        <button class="faq-filter-btn" data-category="projects" role="tab" aria-selected="false">Projects</button>
+        <button class="faq-filter-btn" data-category="meetings" role="tab" aria-selected="false">Meetings</button>
+      </div>
+      
+      <div class="faq-accordion" id="faq-accordion" role="region" aria-label="Frequently asked questions">
+        <!-- FAQ items will be inserted here by JavaScript -->
+      </div>
+      
+      <div class="faq-no-results" id="faq-no-results" hidden>
+        <p>No questions found. Try adjusting your search or filter.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="contact-container">
+        <!-- Hero Introduction -->
+        <div class="contact-hero">
+          <h2 class="section-title">Get in Touch</h2>
+          <p class="section-subtitle">We'd love to hear from you! Reach out to us through any of the channels below.</p>
+        </div>
+
+        <!-- Contact Information Grid -->
+        <div class="contact-info-grid">
+          <div class="contact-card slide-in-left">
+            <div class="contact-icon">📧</div>
+            <h3 class="contact-card-title">Email</h3>
+            <p class="contact-card-description">Send us an email anytime</p>
+            <a href="mailto:info@innovatorsclub.com" class="contact-link">info@innovatorsclub.com</a>
+          </div>
+
+          <div class="contact-card slide-in-right">
+            <div class="contact-icon">📱</div>
+            <h3 class="contact-card-title">Phone</h3>
+            <p class="contact-card-description">Call us during office hours</p>
+            <a href="tel:+1234567890" class="contact-link">+1 (234) 567-8900</a>
+          </div>
+
+          <div class="contact-card slide-in-left">
+            <div class="contact-icon">📍</div>
+            <h3 class="contact-card-title">Address</h3>
+            <p class="contact-card-description">Visit us at our innovation hub</p>
+            <p class="contact-card-text">Room 205, Engineering Building<br>University Campus, City, State 12345</p>
+          </div>
+
+          <div class="contact-card slide-in-right">
+            <div class="contact-icon">🕐</div>
+            <h3 class="contact-card-title">Office Hours</h3>
+            <p class="contact-card-description">We're here to help</p>
+            <p class="contact-card-text">Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM</p>
+          </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="social-links-section">
+          <h3 class="social-section-title">Connect With Us</h3>
+          <p class="social-section-subtitle">Follow us on social media to stay updated with our latest news and events</p>
+          <div class="social-links-grid">
+            <a href="https://linkedin.com/company/innovators-club" target="_blank" rel="noopener noreferrer" class="social-link-card slide-in-bottom">
+              <div class="social-icon">💼</div>
+              <span class="social-platform">LinkedIn</span>
+            </a>
+            <a href="https://twitter.com/innovatorsclub" target="_blank" rel="noopener noreferrer" class="social-link-card slide-in-bottom">
+              <div class="social-icon">🐦</div>
+              <span class="social-platform">Twitter</span>
+            </a>
+            <a href="https://instagram.com/innovatorsclub" target="_blank" rel="noopener noreferrer" class="social-link-card slide-in-bottom">
+              <div class="social-icon">📷</div>
+              <span class="social-platform">Instagram</span>
+            </a>
+            <a href="https://github.com/innovators-club" target="_blank" rel="noopener noreferrer" class="social-link-card slide-in-bottom">
+              <div class="social-icon">💻</div>
+              <span class="social-platform">GitHub</span>
+            </a>
+            <a href="https://facebook.com/innovatorsclub" target="_blank" rel="noopener noreferrer" class="social-link-card slide-in-bottom">
+              <div class="social-icon">👍</div>
+              <span class="social-platform">Facebook</span>
+            </a>
+            <a href="https://whatsapp.com/channel/0029VbB5pMeFHWq9EOgCnP0t" target="_blank" rel="noopener noreferrer" class="social-link-card slide-in-bottom">
+              <div class="social-icon">💬</div>
+              <span class="social-platform">WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Contact CTA -->
+        <div class="contact-cta">
+          <p class="contact-cta-text">Have questions? Want to join us?</p>
+          <div class="contact-cta-buttons">
+            <a href="https://whatsapp.com/channel/0029VbB5pMeFHWq9EOgCnP0t" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Join WhatsApp Channel</a>
+            <a href="mailto:info@innovatorsclub.com" class="btn btn-secondary">Send an Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="cta-section" id="cta">
+      <div class="cta-content">
+        <h2 class="cta-headline">Ready to Transform Your Future?</h2>
+        <p class="cta-subtitle">Join a community of innovators, builders, and leaders. Start your journey today.</p>
+        <div class="cta-buttons">
+          <a href="#membership" class="btn btn-primary">Become a Member</a>
+          <a href="#events" class="btn btn-secondary">Attend an Event</a>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+    
+    <!-- WhatsApp Floating Button -->
+    <a href="https://whatsapp.com/channel/0029VbB5pMeFHWq9EOgCnP0t" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Join our WhatsApp channel">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.386 1.262.617 1.694.789.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </svg>
+    </a>
+  </body>
+</html>
+
+
